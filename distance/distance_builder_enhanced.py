@@ -14,7 +14,7 @@ import numpy as np
 if __name__ == '__main__':
     builder = DistanceBuilder()
     builder.load_points(r'../data/data_others/aggregation.txt')  # Step 1
-    load = 1   # This variable R modifies grid size
+    load = 0.87   # This variable R modifies grid size
     limit = 20  # Density variable for cutoff or screening ratio <APLHA>
     xdata = builder.vectors[:, 0]
     ydata = builder.vectors[:, 1]
@@ -84,5 +84,5 @@ if __name__ == '__main__':
     # print (builder.vectors)
     builder.load_vectors(finalvectors)
     builder.build_distance_file_for_cluster(
-        SqrtDistance(), r'../data/data_others/output_distance.dat')  # Step 5
+        SqrtDistance(), r'../data/data_others/aggregation_distance.dat')  # Step 5
     # 788
